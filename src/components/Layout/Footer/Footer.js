@@ -9,24 +9,24 @@ export function Footer() {
         <div className={styles.columns}>
           <div>
             <Link href='/'>
-              <Image src='/images/logo.png' alt='Gaming' />
+              <Image src='/images/logo_white.png' alt='Bukwave' />
             </Link>
           </div>
 
           <nav>
             <ul>
-              <Link href='#'>Términos y condiciones</Link>
+              <Link href='#'>Sobre nosotros</Link>
               <Link href='#'>Política de privacidad</Link>
-              <Link href='#'>Contacto</Link>
-              <Link href='#'>FAQs</Link>
+              <Link href='#'>Términos y condiciones</Link>
+              <Link href='#'>Aviso Legal</Link>
             </ul>
           </nav>
 
           <div className={styles.social}>
-            <Button as='a' href='#' circular color='facebook' icon='facebook' />
-            <Button as='a' href='#' circular color='twitter' icon='twitter' />
-            <Button as='a' href='#' circular color='linkedin' icon='linkedin' />
-            <Button as='a' href='#' circular color='youtube' icon='youtube' />
+            <Button as='a' href='#' circular size='large' icon='facebook' />
+            <Button as='a' href='#' circular size='large' icon='twitter' />
+            <Button as='a' href='#' circular size='large' icon='linkedin' />
+            <Button as='a' href='#' circular size='large' icon='youtube' />
           </div>
         </div>
 

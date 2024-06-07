@@ -1,0 +1,37 @@
+@import '~/src/scss/index.scss';
+
+.stars {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  row-gap: 24px;
+  padding: 44px 0;
+  margin: 44px 0;
+  border-top: thin solid $disabled;
+  border-bottom: thin solid $disabled;
+
+  @include media(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .line {
+    display: flex;
+
+    p {
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-right: 8px;
+
+      @include media(desktop) {
+        font-size: 13px;
+      }
+    }
+
+    .star {
+      &.inactive {
+        color: $disabled !important;
+      }
+    }
+  }
+}

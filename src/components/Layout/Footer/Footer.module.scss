@@ -2,7 +2,16 @@
 
 .footer {
   background-color: $background-tertiary;
+  color: $text-secondary;
   padding: 30px 0;
+
+  a {
+    color: $text-secondary;
+
+    &:hover {
+      color: rgba($color: $text-secondary, $alpha: 0.5);
+    }
+  }
 }
 
 .columns {
@@ -15,6 +24,7 @@
 
     > a > img {
       width: 150px;
+      border-radius: 0;
     }
 
     > ul {
@@ -30,6 +40,15 @@
       justify-content: flex-end;
       align-items: flex-start;
 
+      a {
+        background-color: $primary;
+        padding: 8px !important;
+
+        i {
+          color: $text-secondary;
+        }
+      }
+
       > a {
         margin-left: 10px;
       }
@@ -40,7 +59,7 @@
 .copyright {
   margin-top: 30px;
   padding-top: 30px;
-  border-top: 1px solid $border-primary;
+  border-top: 1px solid $text-secondary;
 
   > span {
     color: $text-secondary;

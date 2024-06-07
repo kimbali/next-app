@@ -1,0 +1,53 @@
+@import '~/src/scss/index.scss';
+
+.season {
+  .months {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+  }
+
+  .month {
+    @include center();
+
+    .gradient {
+      margin-bottom: 12px;
+      height: 34px;
+      width: 56px;
+      border-radius: 8px;
+
+      &.baja-baja {
+        background: linear-gradient(to right, #13873b, #13873b);
+      }
+      &.baja-media {
+        background: linear-gradient(to right, #13873b, #ffe332);
+      }
+      &.baja-alta {
+        background: linear-gradient(to right, #13873b, #dd4740);
+      }
+      &.media-alta {
+        background: linear-gradient(to right, #ffe332, #dd4740);
+      }
+      &.media-media {
+        background: linear-gradient(to right, #ffe332, #ffe332);
+      }
+      &.media-alta {
+        background: linear-gradient(to right, #ffe332, #13873b);
+      }
+      &.alta-alta {
+        background: linear-gradient(to right, #dd4740, #dd4740);
+      }
+      &.alta-media {
+        background: linear-gradient(to right, #dd4740, #ffe332);
+      }
+      &.alta-baja {
+        background: linear-gradient(to right, #dd4740, #13873b);
+      }
+    }
+
+    p {
+      text-transform: uppercase;
+    }
+  }
+}

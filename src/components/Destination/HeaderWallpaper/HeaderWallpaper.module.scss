@@ -1,0 +1,44 @@
+@import '~/src/scss/index.scss';
+
+.headerWallpaper {
+  display: flex;
+  position: relative;
+  height: 500px;
+
+  > img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    border-radius: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1));
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.16292454481792717) 30%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    bottom: 0;
+    z-index: 0;
+  }
+
+  h2 {
+    position: absolute;
+    top: 35%;
+    color: $text-secondary;
+    font-family: 'Poppins', Sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+  }
+}

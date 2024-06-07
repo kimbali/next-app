@@ -1,0 +1,28 @@
+@import '~/src/scss/index.scss';
+
+.pill {
+  h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 12px;
+    row-gap: 12px;
+    padding: 0;
+    margin: 0 0 24px;
+
+    li {
+      padding: 0;
+      list-style-type: none;
+      border: thin solid $primary;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      color: $primary;
+      border-radius: 72px;
+    }
+  }
+}

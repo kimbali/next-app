@@ -1,0 +1,20 @@
+@import '~/src/scss/index.scss';
+
+.clima {
+  background-color: $background-secondary;
+  padding: 24px 26px 42px;
+  border-radius: 16px;
+  width: 100%;
+
+  .temperature {
+    display: flex;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+}
+
+.pills {
+  align-self: flex-start;
+}

@@ -2,6 +2,7 @@ import { Container } from 'semantic-ui-react';
 import { BasicLayout } from '@/layouts';
 import { Home } from '@/components/Home';
 import { Separator, BarTrust, BannerAd, Seo } from '@/components/Shared';
+import { SeasonDestinies } from '@/components/Home/SeasonDestinies';
 
 const platformsId = {
   playstation: 1,
@@ -16,49 +17,41 @@ export default function HomePage() {
       <Seo />
 
       <BasicLayout>
-        <Home.BannerLastGamePublished />
+        <Separator height={100} />
+
+        <SeasonDestinies />
 
         <Separator height={100} />
 
         <Container>
-          <Home.LatestGames title='Ultimos lanzamientos' />
+          <h2>¿En qué quieres iniciarte?</h2>
         </Container>
-
-        <Separator height={100} />
-
-        <BarTrust />
 
         <Separator height={100} />
 
         <Container>
-          <Home.LatestGames
-            title='PlayStation'
-            limit={3}
-            platformId={platformsId.playstation}
-          />
+          <h2>Ventajas</h2>
         </Container>
 
         <Separator height={100} />
 
-        <BannerAd
-          title='Registrate y obten los mejores precios'
-          subtitle='¡Compara con otros juegos y elige el tuyo!'
-          btnTitle='Entrar ahora'
-          btnLink='/account'
-          image='/images/img01.png'
-        />
+        <Container>
+          <h2>¡Suscríbete!</h2>
+        </Container>
+
+        <Separator height={100} />
+
+        <Container>
+          <h2>Preguntas frecuentes</h2>
+        </Container>
+
+        <Separator height={100} />
+
+        <Container>
+          <h2>¡Conecta con nosotros!</h2>
+        </Container>
 
         <Separator height={50} />
-
-        <Container>
-          <Home.LatestGames
-            title='Xbox'
-            limit={3}
-            platformId={platformsId.xbox}
-          />
-        </Container>
-
-        <Separator height={100} />
       </BasicLayout>
     </>
   );

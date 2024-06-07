@@ -1,0 +1,54 @@
+$mobile: 'screen and (max-width: 991px)';
+$desktop: 'screen and (min-width: 992px)';
+
+@mixin media($point) {
+  @if $point == mobile {
+    @media #{$mobile} {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media #{$desktop} {
+      @content;
+    }
+  }
+}
+
+// use this...
+// @include media(desktop)
+// instead of...
+// @media screen and (min-width: 1024px) {
+// }
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center {
+  @include center();
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 86px;
+
+    > div {
+      width: 50%;
+      margin-top: 0;
+    }
+
+    &.big-small {
+      > :first-child {
+        width: 80%;
+      }
+    }
+  }
+}
