@@ -16,6 +16,11 @@ export const ENV = {
     ORDER: 'orders',
 
     DESTINATIONS: 'destinos',
+    SCHOOLS: 'escuelas',
+  },
+  ROUTES: {
+    SPOT: 'spot',
+    SCHOOL: 'school',
   },
   TOKEN: 'token',
   CART: 'cart',

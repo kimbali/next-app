@@ -1,12 +1,12 @@
 import { ENV } from '@/utils';
 
-export class Destination {
+export class School {
   async getAll({ lang = 'es' } = {}) {
     try {
       const locale = `locale=${lang}`;
       const populate = `populate=*`;
 
-      const url = `${process.env.NEXT_PUBLIC_API_URL}/${ENV.ENDPOINTS.DESTINATIONS}?${locale}&${populate}`;
+      const url = `${process.env.NEXT_PUBLIC_API_URL}/${ENV.ENDPOINTS.SCHOOLS}?${locale}&${populate}`;
 
       const response = await fetch(url);
       const result = await response.json();
@@ -19,12 +19,12 @@ export class Destination {
     }
   }
 
-  async getBySeoUrl(destination) {
+  async getBySeoUrl(school) {
     try {
-      const filters = `filters[seoUrl][$eq]=${destination}`;
+      const filters = `filters[seoUrl][$eq]=${school}`;
       const populate = `populate=*`;
 
-      const url = `${process.env.NEXT_PUBLIC_API_URL}/${ENV.ENDPOINTS.DESTINATIONS}?${filters}&${populate}`;
+      const url = `${process.env.NEXT_PUBLIC_API_URL}/${ENV.ENDPOINTS.SCHOOLS}?${filters}&${populate}`;
 
       const response = await fetch(url);
       const result = await response.json();

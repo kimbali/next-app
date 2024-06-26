@@ -1,0 +1,41 @@
+@import '~/src/scss/index.scss';
+
+.info {
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .languages {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 14px;
+
+    .language {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 10px;
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .services {
+    .service {
+      margin-bottom: 16px;
+      margin-left: 16px;
+      display: flex;
+      column-gap: 12px;
+      align-items: center;
+
+      i {
+        font-size: 24px;
+        color: $primary;
+      }
+    }
+  }
+}

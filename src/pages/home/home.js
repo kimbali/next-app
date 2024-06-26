@@ -4,13 +4,6 @@ import { Home } from '@/components/Home';
 import { Separator, BarTrust, BannerAd, Seo } from '@/components/Shared';
 import { SeasonDestinies } from '@/components/Home/SeasonDestinies';
 
-const platformsId = {
-  playstation: 1,
-  xbox: 2,
-  nintendo: 3,
-  pc: 4,
-};
-
 export default function HomePage() {
   return (
     <>

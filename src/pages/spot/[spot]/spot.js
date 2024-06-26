@@ -21,26 +21,13 @@ export default function DestinationPage(props) {
         <Separator height={60} />
 
         <Container>
-          <h2>Escuelas</h2>
+          <Destination.Schools />
           <h2>¿Qué te podemos ofrecer?</h2>
         </Container>
 
         <Separator height={30} />
 
         <Destination.Info destination={attributes} />
-
-        {/* <Game.Panel gameId={game.id} game={game.attributes} />
-
-        <Separator height={50} />
-
-        <Game.Info game={game.attributes} />
-
-        <Separator height={30} />
-
-        <Game.Media
-          video={game.attributes.video}
-          screenshots={game.attributes.screenshots.data}
-        /> */}
 
         <Separator height={50} />
       </BasicLayout>

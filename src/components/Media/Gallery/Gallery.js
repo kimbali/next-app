@@ -12,9 +12,6 @@ export function Gallery(props) {
 
   const onOpenClose = () => setShow(prevState => !prevState);
 
-  const screenshotsClone = [...screenshots];
-  const principalImage = screenshotsClone.shift();
-
   const settings = {
     dots: true,
     dotsClass: styles.dots,
@@ -24,7 +21,9 @@ export function Gallery(props) {
     arrows: false,
     customPaging: function (index) {
       return (
-        <Image src={`${ENV.SERVER_HOST}${screenshots[index].attributes.url}`} />
+        <Image
+          src={`${process.env.NEXT_PUBLIC_SERVER_HOST}${screenshots[index].attributes.url}`}
+        />
       );
     },
   };
@@ -32,18 +31,11 @@ export function Gallery(props) {
   return (
     <>
       <div className={styles.gallery}>
-        <div className={styles.principal}>
-          <Image
-            src={`${ENV.SERVER_HOST}${principalImage.attributes.url}`}
-            onClick={onOpenClose}
-          />
-        </div>
-
         <div className={styles.grid}>
-          {map(screenshotsClone, screenshot => (
-            <div key={screenshot.id}>
+          {map(screenshots, screenshot => (
+            <div className={styles.screenshoot} key={screenshot.id}>
               <Image
-                src={`${ENV.SERVER_HOST}${screenshot.attributes.url}`}
+                src={`${process.env.NEXT_PUBLIC_SERVER_HOST}${screenshot.attributes.url}`}
                 onClick={onOpenClose}
               />
             </div>
@@ -56,7 +48,9 @@ export function Gallery(props) {
           <Slider {...settings}>
             {map(screenshots, screenshot => (
               <div key={screenshot.id}>
-                <Image src={`${ENV.SERVER_HOST}${screenshot.attributes.url}`} />
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_SERVER_HOST}${screenshot.attributes.url}`}
+                />
               </div>
             ))}
           </Slider>

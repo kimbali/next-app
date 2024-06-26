@@ -1,0 +1,119 @@
+@import '~/src/scss/index.scss';
+
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 96%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  padding-bottom: 12px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    background-color: $background-secondary;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 20px;
+  }
+
+  .screenshoot {
+    height: 100%;
+    width: 300px;
+    min-width: 300px;
+    margin: 24px 12px;
+    padding: 8px 14px 24px;
+
+    img {
+      border-radius: 16px;
+      height: 100%;
+      width: auto;
+
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.carouselContainer {
+  height: 100%;
+
+  > div {
+    height: 100%;
+
+    > div {
+      width: 80%;
+      height: calc(100% - 100px);
+      margin: 0 auto;
+      border-radius: 20px;
+
+      > div {
+        height: 100%;
+
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > div {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > div {
+              display: flex !important;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dots {
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100px;
+
+    > li {
+      height: 100%;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: auto;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.slick-slide {
+  background-color: red;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+}

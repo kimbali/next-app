@@ -1,32 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Destination } from '@/api';
+import { School } from '@/api';
 import { Container } from 'semantic-ui-react';
 import { GridImages } from '@/components/Shared/GridImages';
 import { ENV } from '@/utils';
+import { useRouter } from 'next/router';
 
-const controller = new Destination();
+const controller = new School();
 
-export function SeasonDestinies() {
-  const [destinies, setDestinies] = useState(null);
+export function Schools() {
+  const [schools, setSchools] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     (async () => {
       try {
         const response = await controller.getAll();
-        setDestinies(response.data);
+        setSchools(response.data);
       } catch (error) {
         console.error(error);
       }
     })();
   }, []);
 
-  if (!destinies) return null;
-
+  if (!schools) return null;
   return (
     <Container>
-      <h2>Destinos de temporada</h2>
+      <h2>Eschuelas</h2>
 
-      <GridImages data={destinies} preSeoUrl={ENV.ROUTES.SPOT} />
+      <GridImages
+        data={schools}
+        preSeoUrl={`${router.asPath}/${ENV.ROUTES.SCHOOL}`}
+      />
     </Container>
   );
 }

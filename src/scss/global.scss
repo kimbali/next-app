@@ -51,9 +51,13 @@ img {
   p {
     margin-bottom: 12px;
   }
+}
 
-  a {
-    color: $primary;
+a {
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
